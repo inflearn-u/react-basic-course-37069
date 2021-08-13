@@ -1,4 +1,5 @@
-const express = require('express')
+const config = require('./config/key');
+const express = require('express');
 const app = express()
 const port = 3000
 
@@ -12,7 +13,7 @@ app.use(bodyParser.json())
 
 // DB config
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://guest:I9NOvuzHiCMVFGAi@ec-config-cluster01.lntsd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{
+mongoose.connect(config.mongoURI,{
     useNewUrlParser : true, 
     useUnifiedTopology : true,
     useCreateIndex : true,
