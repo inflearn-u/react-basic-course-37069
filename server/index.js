@@ -33,6 +33,12 @@ const { auth } = require('./middleware/auth');
 
 // REST Api
 app.get('/', (req,res) => res.send('Hello World!'))
+
+app.get('/api/hello', (req,res) => {
+
+    res.send('안녕하세요ㅎ')
+})
+
 app.post('/api/user/register', (req, res) => {
 
     // 회원 가입시 필요한 정보를 client에서 가져와서 DB에 넣는다.

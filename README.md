@@ -4,6 +4,12 @@ Github : [https://github.com/inflearn-u/react-basic-course-37069.git](https://gi
 
 doc : [https://ko.reactjs.org/docs/getting-started.html](https://ko.reactjs.org/docs/getting-started.html)
 
+## PORT
+
+| server | client |
+| --- | --- |
+| 3001   | 3000   | 
+
 1. 서버 ( node.js )
 
     ```bash
@@ -25,7 +31,7 @@ doc : [https://ko.reactjs.org/docs/getting-started.html](https://ko.reactjs.org/
 
 4 npm install express --save
 
-### DB ( mongodb )
+## DB ( mongodb )
 
 1. [https://cloud.mongodb.com/v2#/org/5ea83e538dea4c22b050cd10/projects](https://cloud.mongodb.com/v2#/org/5ea83e538dea4c22b050cd10/projects)
 
