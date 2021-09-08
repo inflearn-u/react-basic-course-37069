@@ -1,7 +1,8 @@
 import React, {useEffect} from 'react'
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
-function LandingPage() {
+function LandingPage(props) {
   useEffect(() => {
     axios.get('/api/hello')
     .then(response => console.log(response.data))
@@ -9,9 +10,13 @@ function LandingPage() {
 
   //function
   const onClickHandler = () => {
-    axios.get('/api/users/logout')
-    .then(response=> {
-      console.log(response.data)
+    axios.get('/api/user/logout')
+    .then(response => {
+      if(response.data.success) {
+        props.history.push('/login')
+      } else {
+        alert('로그아웃 하는데 실패하였습니다.')
+      }
     })
   }
 
@@ -25,4 +30,4 @@ function LandingPage() {
   )
 }
 
-export default LandingPage
+export default withRouter(LandingPage)
