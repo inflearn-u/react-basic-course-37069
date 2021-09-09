@@ -6,6 +6,10 @@ import {
 } from 'react-router-dom'
 
 import LandingPage from './components/views/LandingPage/LandingPage';
+import LoginPage from './components/views/LoginPage/LoginPage';
+import RegisterPage from './components/views/RegisterPage/RegisterPage';
+
+
 export default function App() {
   return (
     <Router>
@@ -18,9 +22,9 @@ export default function App() {
           of them to render at a time
         */}
         <Switch>
-          <Route exact path="/">
-            <LandingPage />
-          </Route>
+          <Route exact path="/" component={LandingPage}/>
+          <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/register" component={RegisterPage} />
         </Switch>
       </div>
     </Router>
